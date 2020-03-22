@@ -5,6 +5,11 @@ body {
     padding: 0;
 }
 
+/* header */
+header div{
+    background-color: rgb(15,202,191);
+}
+
 header div img{
     width:100%;
 }
@@ -13,10 +18,11 @@ header section {
     display:none;
 }
 
+/* Barre de navigation */
 nav{
-    box-sizing: border-box;
     background-color: rgb(15,202,191);
-    height:200px;
+    height: 135px;
+    padding: 0 15% 0 15%;
 }
 
 nav h1{
@@ -24,23 +30,307 @@ nav h1{
     text-transform: uppercase;
     text-align: center;
     margin: 0;
-    line-height: 75px;
+    line-height: 70px;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 
 nav ul{
     display:none;
 }
 
+nav>div{
+    width:100%;
+    display:flex;
+}
+
 nav button{
-    display:block;
+    background-color: white;
+    border: none;
+    color: rgb(87, 87, 87);
+    font-size: 0.9rem;
+    font-weight: 500;
+    height:1.5rem;
+    text-shadow: 2px;
+}
+
+nav div button:first-child{
+    width:100%;
+    text-align: left;
+}
+
+nav div button:nth-child(2){
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.726);
+}
+
+/* main */
+
+main h1{
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: rgba(0,0,0,0.8);
+}
+
+main h1+p{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+main p{
+    color:rgba(0, 0, 0, 0.35);
+    font-size: 1.0rem;
+    line-height: 1.45rem;
+}
+
+main a{
+    text-decoration: none;
+}
+
+/* Page about */
+#about>div{
+    margin: 0 15% 0 15%;
+}
+
+#about article{
+    margin: 0 15% 0 15%;
+}
+
+#about article p>a{
+    color: rgb(15,202,191);
+}
+
+#about aside>div{
+    margin: 0 15% 0 15%;
+}
+
+.bar{
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 0.7rem;
+    background: linear-gradient(-45deg, rgb(231,231,231) 25%, rgb(239,239,239) 25%, rgb(239,239,239) 50%, rgb(231,231,231) 50%, rgb(231,231,231) 75%, rgb(239,239,239) 75%, rgb(239,239,239));
+    background-size: 10px 10px;
+    text-align: center;
+}
+
+#bar54, #bar73, #bar87{
+    height: 100%; 
+}
+
+#bar54{
+    width: 54%;
+    background-color: rgb(245,207,86);
+}
+
+#bar73{
+    width: 73%;
+    background-color: rgb(252,140,50);
+}
+
+#bar87{
+    width: 87%;
+    background-color: rgb(88,206,232);
+}
+
+section aside div span{
+    display: none;
+} 
+
+.bar>p{
+    position: relative;
+    top:-3rem;
+    color: white;
+    font-weight: 900;
+    font-size: 1.1rem;
+} 
+
+section aside+aside{
+    background-image: url(parallax_01.jpg);
+    background-size: 150%, 150%, auto;
+    background-repeat: no-repeat;
+    padding: 0 15% 0 15%;
+}
+
+section aside+aside>div{
+    position: relative;
+    top: 18%;
+}
+
+section aside+aside img{
+    position: relative;
+    width:100%;
+    top:24%;
+}
+
+aside>div>h1,aside>div>p{
+    color: rgba(256,256,256,1);
+}
+
+aside>div>p{
+    font-size: 1.4rem;
+}
+
+.black{
+    background-color: rgb(51,51,51) ;
+    margin: 0;
+    padding: 0 15% 0 15%;
+}  
+
+.black div:first-child{
+    margin: 0 15% 0 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.black div img{
+    border-radius: 50%;
+}
+
+.black blockquote{
+    margin-left:0;
+    margin-right:0;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.black blockquote>p{
+    color: rgba(255, 255, 255, 0.438);
+}
+
+.black blockquote>footer{
+    order:1;
+    color: rgb(15,202,191);
+    font-weight: 900;
+    font-size: 1.2;
+    text-transform: uppercase;
+}
+
+.black blockquote>p{
+    order:2;
+    width:100%;
+}
+
+.returnHome{
+    width: 10%;
+    margin-left:100%;
+}
+
+.returnHome img{
+    width: 100%;
+}
+
+/* page Services */
+#services{
+    margin: 0 15% 0 15%;
+}
+
+#services article img{
+    display: block;
     margin:auto;
 }
 
+#services article h1{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
 
+#services article p{
+    text-align: center;
+}
 
+#services .returnHome{
+    margin-right: 20%;
+}
 
+/* page projets */
+#projects{
+    background-color: rgb(247,247,247); 
+    padding: 0 15% 0 15%;  
+}
 
+#projects h2{
+    color: rgba(0,0,0,0.8);
+    font-size: 1rem;
+}
 
+#projects time{
+    font-weight: 900;
+    color: rgb(15,202,191);
+}
+
+/* page Contacts */
+
+#contacts{
+    background-color: rgb(15,202,191);
+    padding: 0 15% 0 15%;
+}
+
+#contacts h1{
+    color: white;
+}
+
+#contacts div{
+    display: flex;
+}
+
+#contacts label{
+    flex:1;
+    background-color: white;
+    height: 4rem;
+    margin-top:2px;
+    margin-bottom:2px;
+    color: rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#contacts input, #contacts textarea{
+    flex:4;
+    border: none;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
+#message, form div:nth-child(4) label{
+    height:7rem;
+}
+
+#contacts button{
+    border: none;
+    background-color: rgb(33,126,121);
+    color: white;
+    width: 100%;
+    height: 4rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top:2px;
+    margin-bottom:50px;
+}
+
+/* Bas de page */
+footer{
+    margin : 0 15% 0 15%;
+    text-align: center;
+}
+
+footer h1{
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgb(0,0,0,0.8);
+}
+
+footer p{
+    color: rgb(0,0,0,0.8);
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(0,0,0,0.8);
+}
 
 
 

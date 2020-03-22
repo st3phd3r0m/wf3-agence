@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=latin-ext"
+        rel="stylesheet">
 
 </head>
 
@@ -19,11 +22,12 @@
             <!-- animation(s) JS/jQuery ou css? (diaporama/carroussel)  -->
         </div>
 
-        <section><!-- pour Desktop -->
-                <img src="" alt="Logo d'entreprise évoquant le globe terrestre">
-                <h1>Web Development</h1>
-                <p>How to build a blog</p>
-                <button type="button">More informations</button>
+        <section>
+            <!-- pour Desktop -->
+            <img src="" alt="Logo d'entreprise évoquant le globe terrestre">
+            <h1>Web Development</h1>
+            <p>How to build a blog</p>
+            <button type="button">More informations</button>
         </section><!-- Fin Desktop -->
 
     </header>
@@ -35,14 +39,14 @@
 
         <!-- Pour mobile -->
         <!-- animation(s) JS/jQuery ou css? (hamburger ou nav scroll...) -->
-        
-        <button>
-            Home 
-            <i class="fa fa-caret-down"></i>
-        </button>
+        <div>
+            <button>Home</button>
+            <button>
+                <span class="fa fa-caret-down"></span>
+            </button>
+        </div>
+
         <ul>
-
-
             <!-- Pour tablette, mobile et desktop -->
             <!-- animation(s) JS/jQuery ou css pour les mobiles? (hamburger ou nav scroll...) -->
             <li>
@@ -68,8 +72,11 @@
         <!-- about  -->
         <section id="about">
 
-            <h1>About us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita?</p>
+            <div>
+                <h1>About us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita?</p>
+            </div>
+
 
             <article>
                 <p>Lorem ipsum dolor sit, <a href="http://" target="_blank" rel="noopener noreferrer">amet consectetur
@@ -83,42 +90,53 @@
 
                 <div>
                     <!-- animation(s) JS/jQuery ou css? (barres de progression avec transition) -->
-                    <div></div> <!-- ou <canvas></canvas> ? -->
-                    <p>
-                        <span>54%</span>
-                        <span>Claritas est etiam</span> <!-- Display pour ordi seulement -->
-                    </p>
+                    <div class="bar">
+                        <div id="bar54"></div>
+                        <p>
+                            54%
+                            <span>Claritas est etiam</span> <!-- Display pour ordi seulement -->                            
+                        </p>
+                    </div>
+
                 </div>
                 <div>
                     <!-- animation(s) JS/jQuery ou css? (barres de progression avec transition) -->
-                    <div></div> <!-- ou <canvas></canvas> ? -->
-                    <p>
-                        <span>73%</span>
-                        <span>Eodem modo typi</span> <!-- Display pour ordi seulement -->
-                    </p>
+                    <div class="bar">
+                        <div id="bar73"></div>
+                        <p>
+                            73%
+                            <span>Eodem modo typi</span> <!-- Display pour ordi seulement -->                            
+                        </p>
+                    </div>
+
                 </div>
                 <div>
                     <!-- animation(s) JS/jQuery ou css? (barres de progression avec transition) -->
-                    <div></div> <!-- ou <canvas></canvas> ? -->
-                    <p>
-                        <span>87%</span>
-                        <span>Typi non habent claritatem insitam</span> <!-- Display pour ordi seulement -->
-                    </p>
+                    <div class="bar">
+                        <div id="bar87"></div>
+                        <p>
+                            87%
+                            <span>Typi non habent claritatem insitam</span> <!-- Display pour ordi seulement -->                            
+                        </p>
+                    </div>
+
                 </div>
             </aside>
 
-            <aside> <!-- mettre en fond l'image parallax_01.jpg (en css) pour mobile uniquement  -->
-                <div> <!-- Display (css) pour mobile uniquement -->
+            <aside>
+                <!-- mettre en fond l'image parallax_01.jpg (en css) pour mobile uniquement  -->
+                <div>
+                    <!-- Display (css) pour mobile uniquement -->
                     <h1>Why choose us</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum non sint eos?</p>                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum non sint eos?</p>
                 </div>
 
                 <img src="images/index-img01.png" alt="Images d'exemples de pages web">
 
             </aside>
-            
+
             <!-- article fond noir -->
-            <article>
+            <section class="black">
                 <div>
                     <img src="images/index-img02.jpg" alt="Monsieur à l'air songeur">
                     <img src="images/index-img03.jpg" alt="Madame qui sourit">
@@ -126,25 +144,22 @@
                 </div>
 
                 <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat saepe corporis nesciunt illo
+                    <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat saepe corporis nesciunt illo
                         nisi eligendi quae, quod sapiente nobis error dicta corrupti sed, laborum officiis aliquam natus
                         fuga maxime quaerat soluta voluptates. Omnis doloremque esse, facere sunt iure laboriosam
-                        deserunt ex ab tempore laborum veniam. Sint, modi. Repellat nam consequuntur, asperiores iure
-                        consectetur molestiae odio voluptate nemo sint doloribus eveniet autem iusto hic iste maxime
-                        quidem veniam commodi itaque? Esse eveniet voluptates nobis non reprehenderit recusandae neque
-                        hic, debitis minus error odit corrupti maxime, tempore officia, atque est placeat eligendi!
-                        Blanditiis dolore error provident voluptates debitis deleniti placeat, dolorem et?</p>
+                        deserunt ex ab tempore laborum veniam. Sint, modi."</p>
                     <footer>
                         Robert Adams
                     </footer>
                 </blockquote>
-            </article>
 
-            <div>
-                <a href="#home">
-                    <img src="images/Circle-icons-arrow-up.png" alt="animation flèche">
-                </a>
-            </div>    
+                <div class="returnHome">
+                    <a href="#home">
+                        <img src="images/Circle-icons-arrow-up.png" alt="animation flèche">
+                    </a>
+                </div>
+            </section>
+
 
         </section>
 
@@ -210,7 +225,7 @@
 
             </div>
 
-            <div>
+            <div class="returnHome">
                 <a href="#home">
                     <img src="images/Circle-icons-arrow-up.png" alt="animation flèche">
                 </a>
@@ -220,7 +235,7 @@
 
         <!-- projets  -->
         <section id="projects">
-            
+
             <h1>Our news</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequatur?</p>
             <article>
@@ -228,14 +243,14 @@
                     <img src="images/index-img05.jpg" alt="Image d'un ordinateur">
                 </a>
                 <a>
-                    <h1>Lorem ipsum dolor sit.</h1>
+                    <h2>Lorem ipsum dolor sit.</h2>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora maxime neque tempore pariatur
                     officiis, ducimus officia laborum ipsam delectus, omnis nam provident. Cumque consequatur id soluta
                     labore exercitationem dolore eos. Illo, quasi? Quibusdam minus, cumque ratione perferendis inventore
                     vitae a.</p>
                 <p>
-                    <time datetime="23/09/2014">23/09/2014</time>
+                    <time datetime="23 / 09 / 2014">23 / 09 / 2014</time>
                 </p>
             </article>
             <article>
@@ -243,14 +258,14 @@
                     <img src="images/index-img06.jpg" alt="Image d'une poignée de main">
                 </a>
                 <a>
-                    <h1>Lorem ipsum dolor sit.</h1>
+                    <h2>Lorem ipsum dolor sit.</h2>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora maxime neque tempore pariatur
                     officiis, ducimus officia laborum ipsam delectus, omnis nam provident. Cumque consequatur id soluta
                     labore exercitationem dolore eos. Illo, quasi? Quibusdam minus, cumque ratione perferendis inventore
                     vitae a.</p>
                 <p>
-                    <time datetime="27/09/2014">27/09/2014</time>
+                    <time datetime="27 / 09 / 2014">27 / 09 / 2014</time>
                 </p>
             </article>
             <article>
@@ -258,28 +273,28 @@
                     <img src="images/index-img07.jpg" alt="Image d'une équipe au travail">
                 </a>
                 <a>
-                    <h1>Lorem ipsum dolor sit.</h1>
+                    <h2>Lorem ipsum dolor sit.</h2>
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora maxime neque tempore pariatur
                     officiis, ducimus officia laborum ipsam delectus, omnis nam provident. Cumque consequatur id soluta
                     labore exercitationem dolore eos. Illo, quasi? Quibusdam minus, cumque ratione perferendis inventore
                     vitae a.</p>
                 <p>
-                    <time datetime="21/10/2014">21/10/2014</time>
+                    <time datetime="21 / 10 / 2014">21 / 10 / 2014</time>
                 </p>
             </article>
 
-            <div>
+            <div class="returnHome">
                 <a href="#home">
                     <img src="images/Circle-icons-arrow-up.png" alt="animation flèche">
                 </a>
-            </div>    
+            </div>
 
         </section>
 
         <!-- contacts  -->
         <section id="contacts">
-            
+
             <h1>Contact form</h1>
             <form action="#">
                 <div>
@@ -302,14 +317,8 @@
                     <textarea id="message" required></textarea>
                 </div>
 
-                <button type="submit">Valider</button>
+                <button type="submit">Send</button>
             </form>
-
-            <div>
-                <a href="#home">
-                    <img src="images/Circle-icons-arrow-up.png" alt="animation flèche">
-                </a>
-            </div>    
 
         </section>
 
@@ -317,10 +326,16 @@
 
     <footer>
         <h1>Web development & advertising</h1>
-        <p>Copyright &copy; 2020</p>
-        <p>
-            <a href="http://" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <p>Copyright &copy; 2020 <span>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Privacy Policy</a></span>
         </p>
+
+
+        <div class="returnHome">
+            <a href="#home">
+                <img src="images/Circle-icons-arrow-up.png" alt="animation flèche">
+            </a>
+        </div>
     </footer>
 
 </body>
