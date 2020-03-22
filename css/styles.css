@@ -1,0 +1,55 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header div img{
+    width:100%;
+}
+
+header section {
+    display:none;
+}
+
+nav{
+    box-sizing: border-box;
+    background-color: rgb(15,202,191);
+    height:200px;
+}
+
+nav h1{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    line-height: 75px;
+}
+
+nav ul{
+    display:none;
+}
+
+nav button{
+    display:block;
+    margin:auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* Vue ordi et tablette */
+/* header section {
+    width:100%;
+    color:white;
+    position: absolute;
+    top:5%;
+    text-align: center;
+} */
