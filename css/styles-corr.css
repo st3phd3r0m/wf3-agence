@@ -81,11 +81,13 @@ main>section {
 
 main>section h1 {
     color: rgba(0, 0, 0, 0.8);
+    font-size: 2rem;
 }
 
 main>section h2 {
     color: rgba(0, 0, 0, 0.4);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
 main>section article {
@@ -144,3 +146,25 @@ main>section article p>a {
     width: 87%;
     background-color: rgba(88, 206, 232, 0.8);
 }
+
+/* Page Why choose us */
+main section:nth-of-type(2){
+    padding:36px 36px 0 36px;
+    background-image: url(parallax_01.jpg);
+
+}
+
+main section:nth-of-type(2) img{
+    width: 100%;
+}
+
+main section:nth-of-type(2) h1{
+    color:white;
+}
+
+main section:nth-of-type(2) h2{
+    color:white;
+    font-weight: 500;
+    padding-bottom: 75px;
+}
+
