@@ -1,0 +1,146 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/* Compense la ligne blanche en bas des images (artefact provenant des navigateurs)*/
+img {
+    vertical-align: middle;
+}
+
+/* Header */
+header {
+    color: white;
+}
+
+header section {
+    text-align: center;
+    position: relative;
+}
+
+header section img {
+    width: 100%;
+}
+
+.la-globe {
+    font-weight: 700;
+    font-size: 150px;
+    color: rgb(150,150,150);
+}
+
+header section div {
+    position: absolute;
+    left: 50%;
+}
+
+header section div:first-of-type {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header section div+div {
+    bottom: 10%;
+    transform: translateX(-50%);
+}
+
+header section div>h1,
+header section div>h2,
+header section div>a {
+    display: none;
+}
+
+/* Navigation */
+nav {
+    background-color: #0fcabf;
+    padding: 36px;
+    /* text-align: center; */
+    /* padding: 0 15% 0 15%; */
+}
+
+nav h1 {
+    font-family: 'Paytone One', sans-serif;
+    text-align: center;
+}
+
+nav ul {
+    display: none;
+}
+
+nav select {
+    /* margin:auto; */
+    width: 100%;
+    height: 30px;
+    border: none;
+}
+
+/* page About us */
+main>section {
+    text-align: center;
+    padding: 36px;
+}
+
+main>section h1 {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main>section h2 {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1.2rem;
+}
+
+main>section article {
+    text-align: left;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+}
+
+main>section article p>a {
+    color: rgb(15, 202, 191);
+    text-decoration: none;
+}
+
+.bar {
+    width: 100%;
+    margin-bottom: 10px;
+    background: linear-gradient(-45deg, rgb(231, 231, 231) 25%, rgb(239, 239, 239) 25%, rgb(239, 239, 239) 50%, rgb(231, 231, 231) 50%, rgb(231, 231, 231) 75%, rgb(239, 239, 239) 75%, rgb(239, 239, 239));
+    background-size: 10px 10px;
+    /* ou alors background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%); */
+}
+
+.bar p {
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.bar span {
+    display: none;
+}
+
+.jaune,
+.orange,
+.bleu {
+    box-sizing: border-box;
+    /* On  peut aussi utiliser la fonction calc(X%, Ypx) 
+    voir*/
+    padding: 10px;
+}
+
+.jaune {
+    width: 54%;
+    /* au lieu d'utiliser box-sizing */
+    /* calc(54%) - 10% */
+    background-color: rgba(245, 207, 86, 0.8);
+}
+
+.orange {
+    width: 73%;
+    background-color: rgba(252, 140, 50, 0.8);
+}
+
+.bleu {
+    width: 87%;
+    background-color: rgba(88, 206, 232, 0.8);
+}
