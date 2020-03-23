@@ -151,7 +151,6 @@ main>section article p>a {
 main section:nth-of-type(2){
     padding:36px 36px 0 36px;
     background-image: url(parallax_01.jpg);
-
 }
 
 main section:nth-of-type(2) img{
@@ -166,5 +165,56 @@ main section:nth-of-type(2) h2{
     color:white;
     font-weight: 500;
     padding-bottom: 75px;
+}
+
+/* Page Robert Adams */
+main section:nth-of-type(3){
+    padding:72px 36px 0 36px;
+    background-color: #333333;
+}
+
+main section:nth-of-type(3) div{
+    display:flex;
+    justify-content: space-around;
+    padding: 0 15% 5% 15%;
+}
+
+main section:nth-of-type(3) div img{
+    border-radius: 50%;    
+}
+
+main section:nth-of-type(3) blockquote{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section:nth-of-type(3) blockquote p{
+    color:#909090;
+    text-align: left;
+    order:2;
+}
+
+main section:nth-of-type(3) blockquote footer{
+    color:#0fcabf;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    order:1;
+}
+
+main section:nth-of-type(3) a{
+    margin-left:80%;
+
+}
+
+.la-angle-double-up{
+    color: rgb(256,256,256,0.8);
+    font-size: 2rem;
+}
+
+/* Services */
+main section:nth-of-type(4){
+    padding:72px 36px 0 36px;
 }
 
