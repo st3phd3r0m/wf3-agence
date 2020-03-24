@@ -151,6 +151,8 @@ main>section article p>a {
 main section:nth-of-type(2){
     padding:36px 36px 0 36px;
     background-image: url(parallax_01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 main section:nth-of-type(2) img{
@@ -169,14 +171,14 @@ main section:nth-of-type(2) h2{
 
 /* Page Robert Adams */
 main section:nth-of-type(3){
-    padding:72px 36px 0 36px;
+    padding:72px 36px 36px 36px;
     background-color: #333333;
 }
 
 main section:nth-of-type(3) div{
     display:flex;
     justify-content: space-around;
-    padding: 0 15% 5% 15%;
+    padding: 0 15% 0 15%;
 }
 
 main section:nth-of-type(3) div img{
@@ -194,7 +196,7 @@ main section:nth-of-type(3) blockquote p{
     order:2;
 }
 
-main section:nth-of-type(3) blockquote footer{
+main section:nth-of-type(3) blockquote>footer{
     color:#0fcabf;
     font-size: 1.2rem;
     font-weight: 600;
@@ -203,18 +205,212 @@ main section:nth-of-type(3) blockquote footer{
     order:1;
 }
 
-main section:nth-of-type(3) a{
-    margin-left:80%;
-
-}
-
-.la-angle-double-up{
-    color: rgb(256,256,256,0.8);
-    font-size: 2rem;
-}
-
 /* Services */
 main section:nth-of-type(4){
+    padding:72px 36px 72px 36px;
+}
+
+main section:nth-of-type(4) article{
+    text-align: center;
+}
+
+main section:nth-of-type(4) article h1{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.la-magic, .la-cog, .la-headset, .la-volume-up{
+    color: rgba(0,0,0,0.8);
+    font-size: 3rem;
+}
+
+main section:nth-of-type(4) div article a{
+    text-decoration: none;
+}
+
+/* Page Our news */
+main section:nth-of-type(5){
+    background-color: #f7f7f7;
     padding:72px 36px 0 36px;
 }
 
+main section:nth-of-type(5) div h3 {
+    color:rgba(0,0,0,0.8);
+    font-weight: 600;
+}
+
+main section:nth-of-type(5) p {
+    text-align: left;
+}
+
+main section:nth-of-type(5) time {
+    color:#0fcabf;
+    font-weight: 600;
+}
+
+main section:nth-of-type(5) img {
+    width: 100%;
+}
+
+/* Page contacts */
+main section:nth-of-type(6){
+    background-color: #0fcabf;
+}
+
+main section:nth-of-type(6) h1{
+    color: rgba(256,256,256);
+}
+
+main section:nth-of-type(6) div{
+    display: flex;
+}
+
+main section:nth-of-type(6) label{
+    flex:1;
+    background-color: white;
+    height: 4rem;
+    margin-top:2px;
+    margin-bottom:2px;
+    color: rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main section:nth-of-type(6) input, main section:nth-of-type(6) textarea{
+    flex:4;
+    border: none;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
+form div:nth-child(4) label{
+    height:7rem;
+}
+
+main section:nth-of-type(6) button{
+    border: none;
+    background-color: rgb(33,126,121);
+    color: white;
+    width: 100%;
+    height: 4rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top:2px;
+    margin-bottom:50px;
+}
+
+/* Bas de page */
+body>footer{
+    padding:36px 36px 36px 36px;
+    text-align: center;
+}
+
+body>footer h1{
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgb(0,0,0,0.8);
+}
+
+body>footer p{
+    color: rgb(0,0,0,0.8);
+}
+
+
+body>footer a{
+    text-decoration: none;
+    color: rgb(0,0,0,0.8);
+
+}/* Fin vue mobile */
+
+/* Vue tablette */
+@media screen and (min-width: 768px){
+header nav select{
+    display: none;
+}
+
+header nav ul{
+    display:flex;
+    justify-content: space-around;
+    margin: 50px 70px 0 70px;
+    padding: 0px;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+header nav ul li:first-child a{
+    color: black;
+}
+
+main section:first-of-type > div{
+    display: flex;
+}
+
+main section:first-of-type > div article{
+    flex : 1;
+}
+
+main section:first-of-type > div aside{
+    flex : 1;
+}
+
+main section:nth-of-type(3) blockquote{
+    flex-wrap: wrap;
+    justify-content: stretch;
+    margin-left:0;
+    margin-right: 0;
+}
+
+main section:nth-of-type(3) blockquote footer{
+    flex: 1;
+    margin-top: 16px;
+}
+
+main section:nth-of-type(3) blockquote p{
+    flex: 3;
+    border-left: 4px solid rgba(256,256,256,0.1); 
+    padding-left: 30px;
+}
+
+main section:nth-of-type(4)>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section:nth-of-type(4)>div article{
+    width:22%;
+}
+
+main section:nth-of-type(5)>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section:nth-of-type(5)>div article{
+    width:31%;
+}
+
+main section:nth-of-type(6) form{
+    width:60%;
+    margin:auto;
+}
+
+
+
+
+}/*Fin vue tablette*/
+
+/* Vue desktop
+@media screen and (min-width: 1200px){
+
+} */
