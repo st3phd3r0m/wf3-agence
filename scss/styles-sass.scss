@@ -1,0 +1,436 @@
+$cyan:#0fcabf;
+$grisLogo :rgb(220, 220, 220);
+$noir08:rgba(0, 0, 0, 0.8);
+$noir04:rgba(0, 0, 0, 0.4);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+
+    img {
+        vertical-align: middle;
+    }
+
+    /* Header */
+    header {
+        color: white;
+
+        section {
+            text-align: center;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            div {
+                position: absolute;
+                left: 50%;
+
+                &:first-of-type {
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .la-globe {
+                        font-weight: 700;
+                        font-size: 150px;
+                        color: $grisLogo;
+                    }
+
+                    >h1,
+                    >h2,
+                    >a {
+                        display: none;
+                    }
+                }
+
+                +div {
+                    bottom: 10%;
+                    transform: translateX(-50%);
+                    color: $grisLogo;
+                }
+            }
+        }
+
+        /* Navigation */
+        nav {
+            background-color: $cyan;
+            padding: 36px;
+
+            h1 {
+                font-family: 'Paytone One', sans-serif;
+                text-align: center;
+            }
+
+            ul {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                    justify-content: space-around;
+                    margin: 50px 70px 0 70px;
+                    padding: 0px;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-weight: 600;
+                            font-size: 1.2rem;
+                        }
+
+                        &:first-child a {
+                            color: black;
+                        }
+                    }
+
+                }
+
+            }
+
+            select {
+                /* margin:auto; */
+                width: 100%;
+                height: 30px;
+                border: none;
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+
+
+
+            }
+
+        }
+    }
+
+
+    main {
+        section {
+            /* page About us */
+            text-align: center;
+            padding: 36px;
+
+            h1 {
+                color: $noir08;
+                font-size: 2rem;
+            }
+
+            h2 {
+                color: $noir04;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            >div {
+                article {
+                    text-align: left;
+                    color: $noir04;
+                    font-size: 1rem;
+
+                    p>a {
+                        color: $cyan;
+                        text-decoration: none;
+                    }
+                }
+
+                aside {
+                    .bar {
+                        width: 100%;
+                        margin-bottom: 10px;
+                        background: linear-gradient(-45deg, rgb(231, 231, 231) 25%, rgb(239, 239, 239) 25%, rgb(239, 239, 239) 50%, rgb(231, 231, 231) 50%, rgb(231, 231, 231) 75%, rgb(239, 239, 239) 75%, rgb(239, 239, 239));
+                        background-size: 10px 10px;
+
+                        /* ou alors background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%); */
+
+                        .jaune,
+                        .orange,
+                        .bleu {
+                            box-sizing: border-box;
+                            /* On  peut aussi utiliser la fonction calc(X%, Ypx) 
+                        voir*/
+                            padding: 10px;
+
+                            p {
+                                text-align: center;
+                                color: white;
+                                font-weight: 800;
+                                font-size: 1rem;
+                                text-transform: uppercase;
+
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .jaune {
+                            width: 54%;
+                            /* au lieu d'utiliser box-sizing */
+                            /* calc(54%) - 10% */
+                            background-color: rgba(245, 207, 86, 0.8);
+                        }
+
+                        .orange {
+                            width: 73%;
+                            background-color: rgba(252, 140, 50, 0.8);
+                        }
+
+                        .bleu {
+                            width: 87%;
+                            background-color: rgba(88, 206, 232, 0.8);
+                        }
+                    }
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                &:first-of-type>div {
+                    display: flex;
+                    article {
+                        flex: 1;
+                        p{
+                            margin-right: 16px;
+                        }
+                    }
+
+                    aside {
+                        flex: 1;
+                    }
+                }
+            }
+
+            /* Page Why choose us */
+            &:nth-of-type(2) {
+                padding: 36px 36px 0 36px;
+                background-image: url('../images/parallax_01.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+
+                img {
+                    width: 100%;
+                }
+
+                h1 {
+                    color: white;
+                }
+
+                h2 {
+                    color: white;
+                    font-weight: 500;
+                    padding-bottom: 75px;
+                }
+            }
+
+            /* Page Robert Adams */
+            &:nth-of-type(3) {
+                padding: 72px 36px 36px 36px;
+                background-color: #333333;
+
+                div {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 0 15% 0 15%;
+
+                    img {
+                        border-radius: 50%;
+                    }
+
+                }
+
+                blockquote {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    p {
+                        color: #909090;
+                        text-align: left;
+                        order: 2;
+                    }
+
+                    >footer {
+                        color: $cyan;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        text-align: left;
+                        order: 1;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        flex-wrap: wrap;
+                        justify-content: stretch;
+                        margin-left: 0;
+                        margin-right: 0;
+
+                        footer {
+                            flex: 1;
+                            margin-top: 16px;
+                        }
+
+                        p {
+                            flex: 3;
+                            border-left: 4px solid rgba(256, 256, 256, 0.1);
+                            padding-left: 30px;
+                        }
+                    }
+                }
+            }
+
+
+            /* Services */
+            &:nth-of-type(4) {
+                padding: 72px 36px 72px 36px;
+
+                @media screen and (min-width: 768px) {
+                    >div {
+                        display: flex;
+                        justify-content: space-between;
+
+                        article {
+                            width: 22%;
+                        }
+                    }
+                }
+
+                article {
+                    text-align: center;
+
+                    h1 {
+                        font-size: 1.1rem;
+                        text-transform: uppercase;
+                    }
+
+                    .la-magic,
+                    .la-cog,
+                    .la-headset,
+                    .la-volume-up {
+                        color: $noir08;
+                        font-size: 3rem;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                }
+            }
+
+            /* Page Our news */
+            &:nth-of-type(5) {
+                background-color: #f7f7f7;
+                padding: 72px 36px 0 36px;
+
+                h3 {
+                    color: $noir08;
+                    font-weight: 600;
+                }
+
+                p {
+                    text-align: left;
+                }
+
+                time {
+                    color: $cyan;
+                    font-weight: 600;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                @media screen and (min-width: 768px) {
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+
+                        article {
+                            width: 31%;
+                        }
+                    }
+                }
+            }
+
+
+            /* Page contacts */
+            &:nth-of-type(6) {
+                background-color: $cyan;
+
+                h1 {
+                    color: white;
+                }
+
+                div {
+                    display: flex;
+                }
+
+                label {
+                    flex: 1;
+                    background-color: white;
+                    height: 4rem;
+                    margin-top: 2px;
+                    margin-bottom: 2px;
+                    color: $noir04;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+
+                input,
+                textarea {
+                    flex: 4;
+                    border: none;
+                    margin-top: 2px;
+                    margin-bottom: 2px;
+                }
+
+                button {
+                    border: none;
+                    background-color: rgb(33, 126, 121);
+                    color: white;
+                    width: 100%;
+                    height: 4rem;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    margin-top: 2px;
+                    margin-bottom: 50px;
+                }
+
+                form {
+                    div:nth-child(4) label {
+                        height: 7rem;
+                    }
+                    @media screen and (min-width: 768px) {
+                        width: 60%;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Bas de page */
+    >footer {
+        padding: 36px 36px 36px 36px;
+        text-align: center;
+        color: $noir08;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        a {
+            text-decoration: none;
+            color: $noir08;
+        }
+    }
+
+
+}
