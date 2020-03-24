@@ -36,18 +36,42 @@ body header section div:first-of-type {
 
 body header section div:first-of-type .la-globe {
   font-weight: 700;
-  font-size: 150px;
+  font-size: 125px;
   color: gainsboro;
 }
 
-body header section div:first-of-type > h1,
-body header section div:first-of-type > h2,
-body header section div:first-of-type > a {
+body header section div:first-of-type > h1, body header section div:first-of-type > h2, body header section div:first-of-type > a {
   display: none;
 }
 
+@media screen and (min-width: 1200px) {
+  body header section div:first-of-type > h1, body header section div:first-of-type > h2, body header section div:first-of-type > a {
+    display: inherit;
+  }
+  body header section div:first-of-type > h1 {
+    font-size: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  body header section div:first-of-type > h2 {
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  body header section div:first-of-type > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #0fcabf;
+    padding: 8px;
+    width: 20%;
+    margin: auto;
+  }
+}
+
 body header section div + div {
-  bottom: 10%;
+  bottom: 8px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   color: gainsboro;
@@ -61,6 +85,7 @@ body header nav {
 body header nav h1 {
   font-family: 'Paytone One', sans-serif;
   text-align: center;
+  text-transform: uppercase;
 }
 
 body header nav ul {
@@ -104,6 +129,26 @@ body header nav select {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  body header nav {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body header nav h1 {
+    width: 50%;
+    text-align: left;
+  }
+  body header nav ul {
+    width: 50%;
+    margin: auto;
+  }
+}
+
 body main section {
   /* page About us */
   text-align: center;
@@ -129,7 +174,7 @@ body main section h2 {
 body main section > div article {
   text-align: left;
   color: rgba(0, 0, 0, 0.4);
-  font-size: 1rem;
+  font-size: rem;
 }
 
 body main section > div article p > a {
@@ -152,7 +197,6 @@ body main section > div aside .bar .bleu {
           box-sizing: border-box;
   /* On  peut aussi utiliser la fonction calc(X%, Ypx) 
                         voir*/
-  padding: 10px;
 }
 
 body main section > div aside .bar .jaune p,
@@ -169,6 +213,20 @@ body main section > div aside .bar .jaune p span,
 body main section > div aside .bar .orange p span,
 body main section > div aside .bar .bleu p span {
   display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  body main section > div aside .bar .jaune p,
+  body main section > div aside .bar .orange p,
+  body main section > div aside .bar .bleu p {
+    text-align: left;
+    padding-left: 15px;
+  }
+  body main section > div aside .bar .jaune p span,
+  body main section > div aside .bar .orange p span,
+  body main section > div aside .bar .bleu p span {
+    display: inline;
+  }
 }
 
 body main section > div aside .bar .jaune {
@@ -232,6 +290,24 @@ body main section:nth-of-type(2) h2 {
   padding-bottom: 75px;
 }
 
+@media screen and (min-width: 1200px) {
+  body main section:nth-of-type(2) {
+    height: 100vh;
+    position: relative;
+  }
+  body main section:nth-of-type(2) h1, body main section:nth-of-type(2) h2 {
+    display: none;
+  }
+  body main section:nth-of-type(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 body main section:nth-of-type(3) {
   padding: 72px 36px 36px 36px;
   background-color: #333333;
@@ -244,6 +320,12 @@ body main section:nth-of-type(3) div {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 0 15% 0 15%;
+}
+
+@media screen and (min-width: 1200px) {
+  body main section:nth-of-type(3) div {
+    padding: 0 40% 0 40%;
+  }
 }
 
 body main section:nth-of-type(3) div img {
@@ -302,6 +384,13 @@ body main section:nth-of-type(3) blockquote > footer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  body main section:nth-of-type(3) blockquote {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
 body main section:nth-of-type(4) {
   padding: 72px 36px 72px 36px;
 }
@@ -317,6 +406,13 @@ body main section:nth-of-type(4) {
   }
   body main section:nth-of-type(4) > div article {
     width: 22%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body main section:nth-of-type(4) {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -378,6 +474,13 @@ body main section:nth-of-type(5) img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  body main section:nth-of-type(5) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
 body main section:nth-of-type(6) {
   background-color: #0fcabf;
 }
@@ -436,6 +539,13 @@ body main section:nth-of-type(6) form div:nth-child(4) label {
   body main section:nth-of-type(6) form {
     width: 60%;
     margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body main section {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
