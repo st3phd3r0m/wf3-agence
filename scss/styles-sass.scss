@@ -33,19 +33,59 @@ body {
 
                     .la-globe {
                         font-weight: 700;
-                        font-size: 125px;
+                        font-size: 135px;
                         color: $grisLogo;
+
+                        // animation-name: tourne;
+                        // animation-duration: 5s;
+                        // animation-iteration-count: infinite;
+                        // animation-timing-function: linear;
+                        animation: tourne 15s linear infinite, couleur 5s infinite;
                     }
 
-                    >h1, >h2,>a {
+                    @keyframes tourne {
+
+                        from {
+                            -ms-transform: rotateZ(0); /* IE 9 */
+                            transform: rotateZ(0); /* Standard syntax */
+                        }
+                        to { 
+                            -ms-transform: rotateZ(360deg); /* IE 9 */
+                            transform: rotateZ(360deg); /* Standard syntax */
+                        }
+                    }
+
+                    @keyframes couleur {
+                        0% {
+                            color: red;
+                        }
+                        33% {
+                            color:green;
+                        }
+                        66% {
+                            color:blue;
+                        }
+                        100% {
+                            color: red;
+                        }                        
+                    }
+
+
+                    >h1,
+                    >h2,
+                    >a {
                         display: none;
                     }
 
 
-                    @media screen and (min-width: 1200px){
-                        >h1, >h2,>a{
+                    @media screen and (min-width: 1200px) {
+
+                        >h1,
+                        >h2,
+                        >a {
                             display: inherit;
                         }
+
                         >h1 {
                             font-size: 4rem;
                             margin-top: 0.5rem;
@@ -59,16 +99,16 @@ body {
                             margin-bottom: 1rem;
                         }
 
-                        >a{
+                        >a {
                             text-decoration: none;
                             color: white;
                             font-weight: bold;
                             background-color: $cyan;
                             padding: 8px;
                             width: 20%;
-                            margin:auto;
+                            margin: auto;
                         }
-                    
+
                     }
 
                 }
@@ -132,14 +172,16 @@ body {
             @media screen and (min-width: 1200px) {
                 padding-left: 10%;
                 padding-right: 10%;
-                
+
                 display: flex;
                 justify-content: space-around;
-                h1{
+
+                h1 {
                     width: 50%;
                     text-align: left;
                 }
-                ul{
+
+                ul {
                     width: 50%;
                     margin: auto;
                 }
@@ -158,6 +200,23 @@ body {
             h1 {
                 color: $noir08;
                 font-size: 2rem;
+                // position: relative;
+                // display: inline-block;
+
+                // &::before {
+                //     /* pseudo element placé avant le texte dans h1 */
+                //     content: '';
+                //     /* proprété obligatoire */
+                //     width: 100%;
+                //     height: 3px;
+                //     position: absolute;
+                //     background-image: linear-gradient(to right, #0fcafb, white);
+                //     bottom: 0;
+                //     left: 0;
+                //     /* montre l'effet de width:100% lorsque display n'est pas en inline*/
+                //     right: 0;
+                //     /* montre l'effet de width:100% lorsque display n'est pas en inline*/
+                // }
             }
 
             h2 {
@@ -170,7 +229,24 @@ body {
                 article {
                     text-align: left;
                     color: $noir04;
-                    font-size: rem;
+                    font-size: 1rem;
+
+                    // p {
+                    //     position: relative;
+                    //     // display: inline-block;
+                    //     // padding-left: 10px;
+
+                    //     &::before {
+                    //         /* pseudo element placé avant le texte dans h1 */
+                    //         content: '';
+                    //         /* proprété obligatoire */
+                    //         width: 3px;
+                    //         height: 100%;
+                    //         position: absolute;
+                    //         background-image: linear-gradient(#0fcafb, white);
+                    //         left: -8px;
+                    //     }
+                    // }
 
                     p>a {
                         color: $cyan;
@@ -205,10 +281,12 @@ body {
                                 span {
                                     display: none;
                                 }
-                                @media screen and (min-width: 1200px){
-                                    span{
+
+                                @media screen and (min-width: 1200px) {
+                                    span {
                                         display: inline;
                                     }
+
                                     text-align: left;
                                     padding-left:15px;
                                 }
@@ -275,20 +353,24 @@ body {
                     font-weight: 500;
                     padding-bottom: 75px;
                 }
-                @media screen and (min-width: 1200px){
+
+                @media screen and (min-width: 1200px) {
                     height: 100vh;
                     position: relative;
-                    h1,h2{
+
+                    h1,
+                    h2 {
                         display: none;
                     }
-                    img{
+
+                    img {
                         position: absolute;
                         bottom: 0;
-                        left:50%;
-                        width:80%;
+                        left: 50%;
+                        width: 80%;
                         transform: translateX(-50%);
                     }
-                    
+
                 }
             }
 
@@ -302,7 +384,7 @@ body {
                     justify-content: space-around;
                     padding: 0 15% 0 15%;
 
-                    @media screen and (min-width: 1200px){
+                    @media screen and (min-width: 1200px) {
                         padding: 0 40% 0 40%;
                     }
 
@@ -349,9 +431,9 @@ body {
                         }
                     }
 
-                    @media screen and (min-width: 1200px){
+                    @media screen and (min-width: 1200px) {
                         padding-left: 10%;
-                        padding-right: 10%;  
+                        padding-right: 10%;
                     }
                 }
             }
@@ -374,7 +456,7 @@ body {
 
                 @media screen and (min-width: 1200px) {
                     padding-left: 10%;
-                    padding-right: 10%;                    
+                    padding-right: 10%;
                 }
 
                 article {
@@ -436,7 +518,7 @@ body {
 
                 @media screen and (min-width: 1200px) {
                     padding-left: 10%;
-                    padding-right: 10%;                    
+                    padding-right: 10%;
                 }
             }
 
@@ -496,7 +578,7 @@ body {
                 }
             }
 
-            @media screen and (min-width: 1200px){
+            @media screen and (min-width: 1200px) {
                 padding-left: 10%;
                 padding-right: 10%;
             }
@@ -518,6 +600,15 @@ body {
         a {
             text-decoration: none;
             color: $noir08;
+
+            &[href*='facebook.com']{
+                color: #3b5998;
+            }
+
+            &[href*='twitter.com']{
+                color: #1da1f2
+            }
+
         }
     }
 

@@ -82,7 +82,26 @@ main>section {
 main>section h1 {
     color: rgba(0, 0, 0, 0.8);
     font-size: 2rem;
+
+    position: relative;
+    display: inline-block;
 }
+
+main>section h1::before { /* pseudo element placé avant le texte dans h1 */
+    content: ''; /* proprété obligatoire */
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-image: linear-gradient(to right, #0fcafb, white) ;
+    bottom:0;
+    left:0;  /* montre l'effet de width:100% lorsque display n'est pas en inline*/
+    right: 0; /* montre l'effet de width:100% lorsque display n'est pas en inline*/
+}
+
+main>section h1::after { /* pseudo element placé après le texte dans h1 */
+    content: ''; /* proprété obligatoire */
+}
+
 
 main>section h2 {
     color: rgba(0, 0, 0, 0.4);
