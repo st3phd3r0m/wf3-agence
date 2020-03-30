@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -241,6 +242,22 @@ body main section > div article {
   text-align: left;
   color: rgba(0, 0, 0, 0.4);
   font-size: 1rem;
+}
+
+body main section > div article p {
+  position: relative;
+}
+
+body main section > div article p::before {
+  /* pseudo element placé avant le texte dans h1 */
+  content: '';
+  /* proprété obligatoire */
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0fcafb), to(white));
+  background-image: linear-gradient(#0fcafb, white);
+  left: -8px;
 }
 
 body main section > div article p > a {
